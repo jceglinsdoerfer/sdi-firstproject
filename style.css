@@ -1,0 +1,44 @@
+.flex-container {    
+    
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 5fr 5fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    "title "  
+    "title2"  
+    "currentprice "
+    "inputcoin outputcoin";
+    font-size: 125px
+    color: green
+    flex-direction: column
+}
+h1 {
+    grid-area: ; 
+    border: 6 px solid blue
+    color: blue
+    text-wrap: wrap;
+}
+h2 {
+    grid-area: 
+    text-wrap: wrap;
+}
+.listofcoins {
+    grid-area: listofcoins;
+    justify-items: center;
+    list-style-type: none;
+}
+.inputcoins {
+    grid-area: inputcoins;
+    justify-items: center;
+}
+.coinchoice {
+    grid-area: coinchoice;
+    justify-items: center;
+}
+.currentprice {
+    justify-items: center 
+    word-wrap: break-word;
+    grid-area: currentprice;
+}
+
