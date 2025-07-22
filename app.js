@@ -22,7 +22,7 @@ function printAllNames(coins){
     const emptyCoinList = document.querySelector(".listofcoins")
     for (let i = 0; i < coins.length; i++) {
        var listItem = document.createElement("li") 
-       listItem.innerText =`${coins[i].name}  Price per coin $${coins[i].price_usd}`     
+       listItem.innerText =`${coins[i].name}  $${(coins[i].price_usd)}`     
        emptyCoinList.appendChild(listItem)
     }
 }
@@ -31,6 +31,7 @@ let numberInputed = 0;
 let priceOfCoin = 0;
 function returnValue(coins) {
     let selection = document.getElementById("myDropdown");
+    //event listener to get the selected crypto coin
     selection.addEventListener('change', (event) => {
         const selectedCoinID = event.target.value;
         selectedPrice(selectedCoinID);
