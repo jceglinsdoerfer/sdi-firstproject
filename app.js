@@ -26,8 +26,8 @@ function printAllNames(coins){
        emptyCoinList.appendChild(listItem)
     }
 }
-
-
+let numberInputed = 0;
+let priceOfCoin = 0;
 function returnValue(coins) {
     let selection = document.getElementById("myDropdown");
     selection.addEventListener('change', (event) => {
@@ -51,36 +51,24 @@ function returnValue(coins) {
         })
         .then(coinValue => {
             console.log(coinValue[0].price_usd);
-            let priceOfCoin = coinValue[0].price_usd
+            priceOfCoin = coinValue[0].price_usd
+            console.log(numberInputed, priceOfCoin)
+            var totalValue = Math.ceil(numberInputed * priceOfCoin);
+            console.log(totalValue);
+            const outputList = document.getElementById("output-list");
+            var outputTotalValue = document.createElement("li")
+            outputTotalValue.innerText = ` $${totalValue} `
+            outputList.appendChild(outputTotalValue);
             return priceOfCoin;
         })
         .catch(error => console.log(error))
         }
-        
-        }
-    let numberSelection = document.getElementById("numberInput");
-        selection.addEventListener('change', (event) => {
-        const numberInputed = event.target.value;
+    }
+    const numberSelection = document.getElementById('numberInput');
+        numberInput.addEventListener('input', (event) => {
+        numberInputed = event.target.valueAsNumber;
         console.log(numberInputed);    
+
 
         
 })
-//     var valueOfCoins = document.querySelector(".valueOfCoins")
-//     valueOfCoins.innerText= ` ${numberOfCoins * } `
-//     let numberOfCoins = document.querySelector('.numberinput')
-//     numberOfCoins.addEventListener("input", (eventObject) => dataForValue.appendChild(numberOfCoins))
-//     // numberOfCoins = eventObject.target.value
-//     console.log(numberOfCoins)
-    
-//     const coinSelected = document.querySelector(".myDropDown")
-//     const coinSelectedPrice = [];
-//     for (let i = 0; i < coins.length; i++) {
-//         if (coins[i].name === coinSelected) {
-//             coinSelectedPrice.push(coins[i].price_usd)
-//             console.log(coinSelected)
-//         }
-//     }
-//     const producet OfCoins = numberOfCoins * coinSelected;    
-//     dataForValue.appendChild(valueOfCoins);
-//     valueOfCoin.innerText = ` ${valueOfCoins} `
-

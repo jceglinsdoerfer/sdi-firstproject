@@ -34,7 +34,7 @@ h2 {
 }
 .coinchoice {
     grid-area: coinchoice;
-    justify-items: center;
+    justify-items: right;
 }
 .currentprice {
     justify-items: center 
