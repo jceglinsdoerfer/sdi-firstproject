@@ -26,6 +26,7 @@ function printAllNames(coins){
        emptyCoinList.appendChild(listItem)
     }
 }
+//these two variables are global in order to have access outside of the functions
 let numberInputed = 0;
 let priceOfCoin = 0;
 function returnValue(coins) {
@@ -41,9 +42,6 @@ function returnValue(coins) {
                 throw new Error('No information can be found!')
             }
             return response.json()
-        })
-        .then(selectedCoinsData => {
-            return selectedCoinsData;   
         })
         .then(coinValue => {
             priceOfCoin = coinValue[0].price_usd

@@ -12,7 +12,7 @@
     font-size: 125px
     color: green
     flex-direction: column
-}
+    }
 h1 {
     grid-area: ; 
     border: 6 px solid blue
