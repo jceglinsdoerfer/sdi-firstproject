@@ -8,7 +8,7 @@
     "title "  
     "title2"  
     "currentprice "
-    "inputcoin outputcoin";
+    "outputcoin inputcoin ";
     font-size: 125px
     color: green
     flex-direction: column
@@ -30,11 +30,11 @@ h2 {
 }
 .inputcoins {
     grid-area: inputcoins;
-    justify-items: center;
+    justify-content: left;
 }
 .coinchoice {
     grid-area: coinchoice;
-    justify-items: right;
+    justify-items: space-between;
 }
 .currentprice {
     justify-items: center 
